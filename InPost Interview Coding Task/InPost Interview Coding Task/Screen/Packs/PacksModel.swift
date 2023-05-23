@@ -7,4 +7,14 @@
 
 import Foundation
 
-struct PacksModel {}
+struct PacksModel {
+    private let service: PacksServiceProtocol
+
+    init(service: PacksServiceProtocol) {
+        self.service = service
+    }
+
+    func get() async throws -> [PackResponse] {
+        try await service.get()
+    }
+}

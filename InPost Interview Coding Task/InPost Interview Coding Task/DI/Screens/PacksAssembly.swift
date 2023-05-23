@@ -25,8 +25,8 @@ class PacksAssembly: Assembly {
             PacksViewModel()
         }
 
-        container.register(PacksModel.self) { _ in
-            PacksModel()
+        container.register(PacksModel.self) { resolver in
+            PacksModel(service: resolver.resolve(PacksServiceProtocol.self)!)
         }
     }
 }

@@ -10,7 +10,7 @@
 		0ABB2A19C1443362ECFE34A7 /* Pods_InPost_Interview_Coding_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D6C720825E15C8DB9CDFC0 /* Pods_InPost_Interview_Coding_TaskTests.framework */; };
 		4304E83E2A1CE1F2003EB25A /* APICallable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E83D2A1CE1F2003EB25A /* APICallable.swift */; };
 		4304E8402A1CE240003EB25A /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E83F2A1CE240003EB25A /* Responses.swift */; };
-		4304E8422A1CE3D5003EB25A /* PackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E8412A1CE3D5003EB25A /* PackService.swift */; };
+		4304E8422A1CE3D5003EB25A /* PacksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E8412A1CE3D5003EB25A /* PacksService.swift */; };
 		4304E8462A1CEA2F003EB25A /* PacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E8442A1CEA2F003EB25A /* PacksViewController.swift */; };
 		4304E8472A1CEA2F003EB25A /* PacksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4304E8452A1CEA2F003EB25A /* PacksViewController.xib */; };
 		4304E84A2A1CEA5F003EB25A /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E8492A1CEA5F003EB25A /* NibLoadable.swift */; };
@@ -18,6 +18,7 @@
 		4304E8512A1CEB75003EB25A /* PacksAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E8502A1CEB75003EB25A /* PacksAssembly.swift */; };
 		4304E8532A1CEB8F003EB25A /* PacksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E8522A1CEB8F003EB25A /* PacksModel.swift */; };
 		4304E8552A1CEBA0003EB25A /* PacksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E8542A1CEBA0003EB25A /* PacksViewModel.swift */; };
+		4304E8582A1CED00003EB25A /* PacksServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E8572A1CED00003EB25A /* PacksServiceAssembly.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
 		D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */; };
@@ -52,13 +53,14 @@
 /* Begin PBXFileReference section */
 		4304E83D2A1CE1F2003EB25A /* APICallable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallable.swift; sourceTree = "<group>"; };
 		4304E83F2A1CE240003EB25A /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
-		4304E8412A1CE3D5003EB25A /* PackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackService.swift; sourceTree = "<group>"; };
+		4304E8412A1CE3D5003EB25A /* PacksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksService.swift; sourceTree = "<group>"; };
 		4304E8442A1CEA2F003EB25A /* PacksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksViewController.swift; sourceTree = "<group>"; };
 		4304E8452A1CEA2F003EB25A /* PacksViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PacksViewController.xib; sourceTree = "<group>"; };
 		4304E8492A1CEA5F003EB25A /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		4304E8502A1CEB75003EB25A /* PacksAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksAssembly.swift; sourceTree = "<group>"; };
 		4304E8522A1CEB8F003EB25A /* PacksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksModel.swift; sourceTree = "<group>"; };
 		4304E8542A1CEBA0003EB25A /* PacksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksViewModel.swift; sourceTree = "<group>"; };
+		4304E8572A1CED00003EB25A /* PacksServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksServiceAssembly.swift; sourceTree = "<group>"; };
 		58AE36A9CE2AB8D6A8D303B3 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E926BF62306256BFA253197 /* Pods-InPost Interview Coding TaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				4304E83D2A1CE1F2003EB25A /* APICallable.swift */,
-				4304E8412A1CE3D5003EB25A /* PackService.swift */,
+				4304E8412A1CE3D5003EB25A /* PacksService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -144,6 +146,7 @@
 		4304E84B2A1CEB3D003EB25A /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				4304E8562A1CECEF003EB25A /* Services */,
 				4304E84F2A1CEB67003EB25A /* Screens */,
 			);
 			path = DI;
@@ -155,6 +158,14 @@
 				4304E8502A1CEB75003EB25A /* PacksAssembly.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		4304E8562A1CECEF003EB25A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4304E8572A1CED00003EB25A /* PacksServiceAssembly.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		913D9F73B32F33C130C9E20B /* Frameworks */ = {
@@ -544,10 +555,11 @@
 			files = (
 				4304E8512A1CEB75003EB25A /* PacksAssembly.swift in Sources */,
 				4304E8552A1CEBA0003EB25A /* PacksViewModel.swift in Sources */,
-				4304E8422A1CE3D5003EB25A /* PackService.swift in Sources */,
+				4304E8422A1CE3D5003EB25A /* PacksService.swift in Sources */,
 				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
+				4304E8582A1CED00003EB25A /* PacksServiceAssembly.swift in Sources */,
 				4304E84A2A1CEA5F003EB25A /* NibLoadable.swift in Sources */,
 				4304E8402A1CE240003EB25A /* Responses.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,

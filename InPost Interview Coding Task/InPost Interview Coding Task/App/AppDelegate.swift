@@ -34,6 +34,9 @@ private extension AppDelegate {
             /// Screens
             PacksAssembly(),
 
+            /// Services
+            PacksServiceAssembly(),
+
         ])
     }
 }

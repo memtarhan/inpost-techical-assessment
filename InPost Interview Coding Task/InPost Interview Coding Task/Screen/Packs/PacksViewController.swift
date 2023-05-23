@@ -9,10 +9,12 @@ import UIKit
 
 class PacksViewController: UIViewController, NibLoadable {
     var viewModel: PacksViewModel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         view.backgroundColor = .systemYellow
+
+        viewModel.load()
     }
 }
