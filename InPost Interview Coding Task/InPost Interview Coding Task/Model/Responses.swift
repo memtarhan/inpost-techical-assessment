@@ -11,7 +11,7 @@ protocol APIResponse: Decodable { }
 
 struct PackResponse: APIResponse {
     let id: String
-    let status: String
+    let status: String // TODO: Change it to PackStatus
     let sender: String
     let expiryDate: Date?
     let pickupDate: Date?
