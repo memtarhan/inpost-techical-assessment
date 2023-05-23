@@ -17,6 +17,26 @@ class PacksViewModel {
     @Published var snapshotPublisher = PassthroughSubject<snapshotType, Never>()
 
     func load() {
+        handleData()
+    }
+
+    func refresh() {
+        snapshot.deleteSections(snapshot.sectionIdentifiers)
+        snapshotPublisher.send(snapshot)
+        /// To simulate server-like load because fetching data from local is so fast
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { [weak self] _ in
+            self?.handleData()
+        }
+    }
+
+    func section(atIndexPath indexPath: IndexPath) -> PacksGroupDisplayModel {
+        let index = indexPath.section
+        return snapshot.sectionIdentifiers[index] // TODO: Add index-out-of-bounds check
+    }
+}
+
+private extension PacksViewModel {
+    func handleData() {
         Task {
             do {
                 // TODO: Handle grouping
@@ -48,10 +68,5 @@ class PacksViewModel {
                 print("failed to fetch packs \(error.localizedDescription)")
             }
         }
-    }
-
-    func section(atIndexPath indexPath: IndexPath) -> PacksGroupDisplayModel {
-        let index = indexPath.section
-        return snapshot.sectionIdentifiers[index] // TODO: Add index-out-of-bounds check
     }
 }

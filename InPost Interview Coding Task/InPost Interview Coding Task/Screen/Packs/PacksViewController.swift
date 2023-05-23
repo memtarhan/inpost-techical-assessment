@@ -14,6 +14,7 @@ class PacksViewController: UIViewController, NibLoadable {
     // MARK: - IBOutlets
 
     @IBOutlet var collectionView: UICollectionView!
+    private let refreshControl = UIRefreshControl()
 
     private lazy var dataSource = generatedDataSource
 
@@ -51,6 +52,13 @@ class PacksViewController: UIViewController, NibLoadable {
 
         return dataSource
     }
+
+    // MARK: - Actions
+
+    @objc
+    private func didPullToRefresh(_ sender: UIRefreshControl) {
+        viewModel.refresh()
+    }
 }
 
 // MARK: Setups
@@ -58,7 +66,7 @@ class PacksViewController: UIViewController, NibLoadable {
 private extension PacksViewController {
     func setupUI() {
         navigationItem.title = "Lista przesyłek"
-        
+
         let cell = UINib(nibName: PackCollectionViewCell.identifier, bundle: nil)
         collectionView.register(cell, forCellWithReuseIdentifier: PackCollectionViewCell.identifier)
 
@@ -68,12 +76,20 @@ private extension PacksViewController {
         collectionView.delegate = self
         collectionView.dataSource = dataSource
         collectionView.collectionViewLayout = createComponsitionalLayout()
+
+        refreshControl.addTarget(self, action: #selector(didPullToRefresh(_:)), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
     }
 
     func setupSubscribers() {
         viewModel.snapshotPublisher
             .receive(on: DispatchQueue.main)
-            .sink { snapshot in
+            .sink { [weak self] snapshot in
+                guard let self else { return }
+
+                if self.refreshControl.isRefreshing {
+                    self.refreshControl.endRefreshing()
+                }
                 self.dataSource.apply(snapshot)
             }
             .store(in: &cancellables)
