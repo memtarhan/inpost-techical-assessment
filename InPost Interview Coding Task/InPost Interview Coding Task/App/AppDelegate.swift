@@ -18,11 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     private func buildStartingView() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let packListController = storyboard.instantiateViewController(withIdentifier: "PackListController") as! PackListController
-        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = IPNavigationController(rootViewController: packListController)
+        window?.rootViewController = PacksViewController.instantiate()
         window?.makeKeyAndVisible()
     }
     
