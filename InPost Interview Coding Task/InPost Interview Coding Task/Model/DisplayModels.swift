@@ -26,10 +26,12 @@ class PacksGroupDisplayModel: Hashable {
 class PackDisplayModel: Hashable {
     let id: String
     let status: String
+    let sender: String
 
-    init(id: String, status: String) {
+    init(id: String, status: String, sender: String) {
         self.id = id
         self.status = status
+        self.sender = sender
     }
 
     func hash(into hasher: inout Hasher) {

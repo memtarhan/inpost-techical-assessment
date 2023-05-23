@@ -34,7 +34,7 @@ class PacksViewController: UIViewController, NibLoadable {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PackCollectionViewCell.identifier, for: indexPath) as? PackCollectionViewCell
             else { return UICollectionViewCell() }
 
-            print(model)
+            cell.configure(withPack: model)
 
             return cell
         }
@@ -44,9 +44,8 @@ class PacksViewController: UIViewController, NibLoadable {
                 return nil
             }
 
-            header.titleLabel.text = ""//self.viewModel.section(atIndexPath: indexPath)
+            header.titleLabel.text = "Section #\(indexPath.section)" // self.viewModel.section(atIndexPath: indexPath)
 
-            
             return header
         }
 
@@ -58,6 +57,8 @@ class PacksViewController: UIViewController, NibLoadable {
 
 private extension PacksViewController {
     func setupUI() {
+        navigationItem.title = "Lista przesyłek"
+        
         let cell = UINib(nibName: PackCollectionViewCell.identifier, bundle: nil)
         collectionView.register(cell, forCellWithReuseIdentifier: PackCollectionViewCell.identifier)
 
@@ -112,6 +113,7 @@ private extension PacksViewController {
     func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(36))
         let header = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize, elementKind: UICollectionView.elementKindSectionHeader, alignment: .top)
+        header.pinToVisibleBounds = true
 
         return header
     }

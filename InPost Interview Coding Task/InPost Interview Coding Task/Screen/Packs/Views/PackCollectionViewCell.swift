@@ -8,11 +8,13 @@
 import UIKit
 
 class PackCollectionViewCell: UICollectionViewCell, CellIdentifiable {
-    @IBOutlet var packView: UIView!
+    @IBOutlet var packView: PackView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
 
-        packView.backgroundColor = .systemYellow
+    func configure(withPack pack: PackDisplayModel) {
+        packView.setup(pack: pack)
     }
 }

@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="266" height="203"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CY8-fq-6WK">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CY8-fq-6WK" customClass="PackView" customModule="InPost_Interview_Coding_Task" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="266" height="203"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>

@@ -19,15 +19,28 @@ class PacksViewModel {
     func load() {
         Task {
             do {
+                // TODO: Handle grouping
                 let packs = try await model.get()
 
                 let group = PacksGroupDisplayModel(title: "Section 1")
                 let displayModels = packs.map {
                     PackDisplayModel(id: $0.id,
-                                     status: "status")
+                                     status: $0.status.rawValue,
+                                     sender: $0.sender)
                 }
                 snapshot.appendSections([group])
                 snapshot.appendItems(displayModels, toSection: group)
+                snapshotPublisher.send(snapshot)
+
+                let group2 = PacksGroupDisplayModel(title: "Section 1")
+                let displayModels2 = packs.map {
+                    PackDisplayModel(id: $0.id + "-0",
+                                     status: $0.status.rawValue,
+                                     sender: $0.sender)
+                }
+                snapshot.appendSections([group2])
+                snapshot.appendItems(displayModels2, toSection: group2)
+
                 snapshotPublisher.send(snapshot)
 
             } catch {
@@ -36,7 +49,7 @@ class PacksViewModel {
             }
         }
     }
-    
+
     func section(atIndexPath indexPath: IndexPath) -> PacksGroupDisplayModel {
         let index = indexPath.section
         return snapshot.sectionIdentifiers[index] // TODO: Add index-out-of-bounds check

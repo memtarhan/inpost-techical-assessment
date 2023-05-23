@@ -11,7 +11,7 @@ protocol APIResponse: Decodable { }
 
 struct PackResponse: APIResponse {
     let id: String
-    let status: String // TODO: Change it to PackStatus
+    let status: PackStatus // TODO: Change it to PackStatus
     let sender: String
     let expiryDate: Date?
     let pickupDate: Date?
@@ -19,8 +19,8 @@ struct PackResponse: APIResponse {
     let shipmentType: String
 }
 
-enum PackStatus: Int, APIResponse {
-    case CREATED = 1
+enum PackStatus: String, APIResponse {
+    case CREATED
     case CONFIRMED
     case ADOPTED_AT_SOURCE_BRANCH
     case SENT_FROM_SOURCE_BRANCH
@@ -33,6 +33,8 @@ enum PackStatus: Int, APIResponse {
     case OUT_FOR_DELIVERY
     case READY_TO_PICKUP
     case PICKUP_TIME_EXPIRED
+    case NOT_READY
+    case BROKEN_STATUS
 }
 
 extension Array where Element: APIResponse {
