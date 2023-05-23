@@ -8,6 +8,8 @@
 import UIKit
 
 class PacksViewController: UIViewController, NibLoadable {
+    var viewModel: PacksViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
