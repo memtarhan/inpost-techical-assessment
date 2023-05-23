@@ -22,7 +22,7 @@ class PacksViewModel {
                 // TODO: Handle grouping
                 let packs = try await model.get()
 
-                let group = PacksGroupDisplayModel(title: "Section 1")
+                let group = PacksGroupDisplayModel(title: "Group 1")
                 let displayModels = packs.map {
                     PackDisplayModel(id: $0.id,
                                      status: $0.status.rawValue,
@@ -32,7 +32,7 @@ class PacksViewModel {
                 snapshot.appendItems(displayModels, toSection: group)
                 snapshotPublisher.send(snapshot)
 
-                let group2 = PacksGroupDisplayModel(title: "Section 1")
+                let group2 = PacksGroupDisplayModel(title: "Group 2")
                 let displayModels2 = packs.map {
                     PackDisplayModel(id: $0.id + "-0",
                                      status: $0.status.rawValue,

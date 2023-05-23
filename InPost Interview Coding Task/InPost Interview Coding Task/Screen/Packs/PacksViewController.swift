@@ -41,10 +41,10 @@ class PacksViewController: UIViewController, NibLoadable {
 
         dataSource.supplementaryViewProvider = { collectionView, kind, indexPath in
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: PacksGroupHeaderView.reuseIdentifier, for: indexPath) as? PacksGroupHeaderView else {
-                return nil
+                return UICollectionReusableView()
             }
 
-            header.titleLabel.text = "Section #\(indexPath.section)" // self.viewModel.section(atIndexPath: indexPath)
+            header.titleLabel.text = self.viewModel.section(atIndexPath: indexPath).title
 
             return header
         }
@@ -101,7 +101,7 @@ private extension PacksViewController {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 8, bottom: 0, trailing: 8)
 
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(240))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(200))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
 
         let section = NSCollectionLayoutSection(group: group)
