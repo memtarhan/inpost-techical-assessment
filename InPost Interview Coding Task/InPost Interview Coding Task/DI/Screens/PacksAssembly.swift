@@ -26,7 +26,8 @@ class PacksAssembly: Assembly {
         }
 
         container.register(PacksModel.self) { resolver in
-            PacksModel(service: resolver.resolve(PacksServiceProtocol.self)!)
+            PacksModel(service: resolver.resolve(PacksServiceProtocol.self)!,
+                       localService: resolver.resolve(PacksLocalServiceProtocol.self)!)
         }
     }
 }

@@ -25,6 +25,11 @@
 		4304E8672A1D0549003EB25A /* PackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4304E8652A1D0549003EB25A /* PackCollectionViewCell.xib */; };
 		4304E86E2A1D0903003EB25A /* PacksGroupHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4304E86C2A1D0903003EB25A /* PacksGroupHeaderView.swift */; };
 		4304E86F2A1D0903003EB25A /* PacksGroupHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4304E86D2A1D0903003EB25A /* PacksGroupHeaderView.xib */; };
+		438B87572A1E769C00788752 /* PacksLocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B87562A1E769C00788752 /* PacksLocalService.swift */; };
+		438B87592A1E775400788752 /* LocalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B87582A1E775400788752 /* LocalModels.swift */; };
+		438B875B2A1E796400788752 /* RealmAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B875A2A1E796400788752 /* RealmAssembly.swift */; };
+		438B875D2A1E7A2900788752 /* PacksLocalServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B875C2A1E7A2900788752 /* PacksLocalServiceAssembly.swift */; };
+		438B875F2A1E7AD400788752 /* RealmInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438B875E2A1E7AD400788752 /* RealmInstance.swift */; };
 		D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671D9572913E528001FA9D5 /* AppDelegate.swift */; };
 		D671D9612913E529001FA9D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D671D9602913E529001FA9D5 /* Assets.xcassets */; };
 		D671D9642913E529001FA9D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D671D9622913E529001FA9D5 /* LaunchScreen.storyboard */; };
@@ -73,6 +78,11 @@
 		4304E8652A1D0549003EB25A /* PackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PackCollectionViewCell.xib; sourceTree = "<group>"; };
 		4304E86C2A1D0903003EB25A /* PacksGroupHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksGroupHeaderView.swift; sourceTree = "<group>"; };
 		4304E86D2A1D0903003EB25A /* PacksGroupHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PacksGroupHeaderView.xib; sourceTree = "<group>"; };
+		438B87562A1E769C00788752 /* PacksLocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksLocalService.swift; sourceTree = "<group>"; };
+		438B87582A1E775400788752 /* LocalModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalModels.swift; sourceTree = "<group>"; };
+		438B875A2A1E796400788752 /* RealmAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAssembly.swift; sourceTree = "<group>"; };
+		438B875C2A1E7A2900788752 /* PacksLocalServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacksLocalServiceAssembly.swift; sourceTree = "<group>"; };
+		438B875E2A1E7AD400788752 /* RealmInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmInstance.swift; sourceTree = "<group>"; };
 		58AE36A9CE2AB8D6A8D303B3 /* Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests/Pods-InPost Interview Coding Task-InPost Interview Coding TaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5E926BF62306256BFA253197 /* Pods-InPost Interview Coding TaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding TaskTests.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding TaskTests/Pods-InPost Interview Coding TaskTests.release.xcconfig"; sourceTree = "<group>"; };
 		83D85C87E2E58F658C011C49 /* Pods-InPost Interview Coding Task.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InPost Interview Coding Task.release.xcconfig"; path = "Target Support Files/Pods-InPost Interview Coding Task/Pods-InPost Interview Coding Task.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				4304E8572A1CED00003EB25A /* PacksServiceAssembly.swift */,
+				438B875A2A1E796400788752 /* RealmAssembly.swift */,
+				438B875C2A1E7A2900788752 /* PacksLocalServiceAssembly.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -191,6 +203,14 @@
 				4304E86D2A1D0903003EB25A /* PacksGroupHeaderView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		438B87552A1E768400788752 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				438B87562A1E769C00788752 /* PacksLocalService.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 		913D9F73B32F33C130C9E20B /* Frameworks */ = {
@@ -245,7 +265,7 @@
 				D671D9872913E649001FA9D5 /* App */,
 				D671D98A2913ED95001FA9D5 /* Controls */,
 				D671D98D2913F297001FA9D5 /* Model */,
-				D671D9952915110C001FA9D5 /* Networking */,
+				D671D9952915110C001FA9D5 /* Data */,
 				D671D9892913E685001FA9D5 /* Screen */,
 				D671D9652913E529001FA9D5 /* Info.plist */,
 			);
@@ -301,6 +321,8 @@
 				D671D98E2913F2A1001FA9D5 /* Pack.swift */,
 				4304E83F2A1CE240003EB25A /* Responses.swift */,
 				4304E8592A1CFE80003EB25A /* DisplayModels.swift */,
+				438B87582A1E775400788752 /* LocalModels.swift */,
+				438B875E2A1E7AD400788752 /* RealmInstance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,14 +336,15 @@
 			path = PackView;
 			sourceTree = "<group>";
 		};
-		D671D9952915110C001FA9D5 /* Networking */ = {
+		D671D9952915110C001FA9D5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				438B87552A1E768400788752 /* Local */,
 				4304E83C2A1CE1E4003EB25A /* API */,
 				D671D99929151360001FA9D5 /* Mock */,
 				D671D9962915111C001FA9D5 /* PackNetworking.swift */,
 			);
-			path = Networking;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		D671D99929151360001FA9D5 /* Mock */ = {
@@ -581,24 +604,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438B87572A1E769C00788752 /* PacksLocalService.swift in Sources */,
 				4304E8512A1CEB75003EB25A /* PacksAssembly.swift in Sources */,
 				4304E8662A1D0549003EB25A /* PackCollectionViewCell.swift in Sources */,
 				4304E8552A1CEBA0003EB25A /* PacksViewModel.swift in Sources */,
 				4304E8612A1D0056003EB25A /* CellIdentifiable.swift in Sources */,
 				4304E8422A1CE3D5003EB25A /* PacksService.swift in Sources */,
 				D671D9972915111C001FA9D5 /* PackNetworking.swift in Sources */,
+				438B875F2A1E7AD400788752 /* RealmInstance.swift in Sources */,
 				D671D98F2913F2A1001FA9D5 /* Pack.swift in Sources */,
 				D671D98C2913EDA4001FA9D5 /* IPNavigationController.swift in Sources */,
 				4304E85A2A1CFE80003EB25A /* DisplayModels.swift in Sources */,
 				4304E8582A1CED00003EB25A /* PacksServiceAssembly.swift in Sources */,
 				4304E84A2A1CEA5F003EB25A /* NibLoadable.swift in Sources */,
+				438B875D2A1E7A2900788752 /* PacksLocalServiceAssembly.swift in Sources */,
 				4304E8402A1CE240003EB25A /* Responses.swift in Sources */,
+				438B875B2A1E796400788752 /* RealmAssembly.swift in Sources */,
 				4304E86E2A1D0903003EB25A /* PacksGroupHeaderView.swift in Sources */,
 				D671D9912913F79B001FA9D5 /* PackView.swift in Sources */,
 				4304E8462A1CEA2F003EB25A /* PacksViewController.swift in Sources */,
 				4304E8532A1CEB8F003EB25A /* PacksModel.swift in Sources */,
 				4304E83E2A1CE1F2003EB25A /* APICallable.swift in Sources */,
 				D671D9582913E528001FA9D5 /* AppDelegate.swift in Sources */,
+				438B87592A1E775400788752 /* LocalModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

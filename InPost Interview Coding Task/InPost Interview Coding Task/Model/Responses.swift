@@ -36,6 +36,3 @@ enum PackStatus: String, APIResponse {
     case NOT_READY
     case BROKEN_STATUS
 }
-
-extension Array where Element: APIResponse {
-}

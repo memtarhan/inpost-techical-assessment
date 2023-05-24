@@ -34,9 +34,12 @@ private extension AppDelegate {
             /// Screens
             PacksAssembly(),
 
+            /// Common
+            RealmAssembly(),
+
             /// Services
             PacksServiceAssembly(),
-
+            PacksLocalServiceAssembly(),
         ])
     }
 }

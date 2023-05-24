@@ -17,6 +17,7 @@ class PacksViewModel {
     @Published var snapshotPublisher = PassthroughSubject<snapshotType, Never>()
 
     func load() {
+        model.save()
         handleData()
     }
 
